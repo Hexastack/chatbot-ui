@@ -15,6 +15,7 @@ interface APIStepProps {
   anthropicAPIKey: string
   googleGeminiAPIKey: string
   mistralAPIKey: string
+  hexabotAPIKey: string
   groqAPIKey: string
   perplexityAPIKey: string
   useAzureOpenai: boolean
@@ -48,6 +49,7 @@ export const APIStep: FC<APIStepProps> = ({
   anthropicAPIKey,
   googleGeminiAPIKey,
   mistralAPIKey,
+  hexabotAPIKey,
   groqAPIKey,
   perplexityAPIKey,
   openrouterAPIKey,
@@ -64,6 +66,7 @@ export const APIStep: FC<APIStepProps> = ({
   onGoogleGeminiAPIKeyChange,
   onMistralAPIKeyChange,
   onGroqAPIKeyChange,
+  onHexabotAPIKeyChange,
   onPerplexityAPIKeyChange,
   onUseAzureOpenaiChange,
   onOpenrouterAPIKeyChange
@@ -236,6 +239,16 @@ export const APIStep: FC<APIStepProps> = ({
           type="password"
           value={openrouterAPIKey}
           onChange={e => onOpenrouterAPIKeyChange(e.target.value)}
+        />
+      </div>
+      <div className="space-y-1">
+        <Label>Hexabot API Key</Label>
+
+        <Input
+          placeholder="Hexabot API Key"
+          type="password"
+          value={hexabotAPIKey}
+          onChange={e => onHexabotAPIKeyChange(e.target.value)}
         />
       </div>
     </>

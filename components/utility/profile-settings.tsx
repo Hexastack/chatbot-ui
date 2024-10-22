@@ -723,6 +723,21 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
                   </>
                 )}
               </div>
+              <div className="space-y-1">
+                {envKeyMap["hexabot"] ? (
+                  <Label>Hexabot API key set by admin.</Label>
+                ) : (
+                  <>
+                    <Label>Hexabot API Key</Label>
+                    <Input
+                      placeholder="Hexabot API Key"
+                      type="password"
+                      value=""
+                      // onChange={e => setHexabotAPIKey(e.target.value)}
+                    />
+                  </>
+                )}
+              </div>
             </TabsContent>
           </Tabs>
         </div>

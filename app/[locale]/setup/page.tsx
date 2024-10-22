@@ -60,6 +60,7 @@ export default function SetupPage() {
   const [groqAPIKey, setGroqAPIKey] = useState("")
   const [perplexityAPIKey, setPerplexityAPIKey] = useState("")
   const [openrouterAPIKey, setOpenrouterAPIKey] = useState("")
+  const [hexabotAPIKey, setHexabotAPIKey] = useState("")
 
   useEffect(() => {
     ;(async () => {
@@ -203,6 +204,7 @@ export default function SetupPage() {
               googleGeminiAPIKey={googleGeminiAPIKey}
               mistralAPIKey={mistralAPIKey}
               groqAPIKey={groqAPIKey}
+              hexabotAPIKey={hexabotAPIKey}
               perplexityAPIKey={perplexityAPIKey}
               useAzureOpenai={useAzureOpenai}
               onOpenaiAPIKeyChange={setOpenaiAPIKey}
@@ -221,6 +223,7 @@ export default function SetupPage() {
               onUseAzureOpenaiChange={setUseAzureOpenai}
               openrouterAPIKey={openrouterAPIKey}
               onOpenrouterAPIKeyChange={setOpenrouterAPIKey}
+              onHexabotAPIKeyChange={setHexabotAPIKey}
             />
           </StepContainer>
         )
